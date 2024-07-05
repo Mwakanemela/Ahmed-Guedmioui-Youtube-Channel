@@ -49,13 +49,14 @@ fun StateRemember(modifier: Modifier) {
             mutableStateOf(true)
         }
 
+        val text = if(textVisibilityState.value) "Text visible" else "Text not visible"
 //        if(textVisibilityState.value) {
 //            Text(text = "Toggle")
 //        }
         Text(
-            text = "Toggle",
+            text = text,
             modifier = Modifier.alpha(
-                if (textVisibilityState.value) 1f else 0f
+                if (textVisibilityState.value) 1f else 0.3f
             )
         )
         Spacer(modifier = Modifier.height(30.dp))
