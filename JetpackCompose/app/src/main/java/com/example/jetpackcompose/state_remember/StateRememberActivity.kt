@@ -50,6 +50,7 @@ fun StateRemember(modifier: Modifier) {
         }
 
         val text = if(textVisibilityState.value) "Text visible" else "Text not visible"
+        //without alpha use this
 //        if(textVisibilityState.value) {
 //            Text(text = "Toggle")
 //        }
