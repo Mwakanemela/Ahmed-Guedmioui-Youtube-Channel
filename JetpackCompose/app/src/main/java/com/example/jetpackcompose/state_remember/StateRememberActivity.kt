@@ -18,6 +18,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcompose.state_remember.ui.theme.JetpackComposeTheme
@@ -48,9 +49,15 @@ fun StateRemember(modifier: Modifier) {
             mutableStateOf(true)
         }
 
-        if(textVisibilityState.value) {
-            Text(text = "Toggle")
-        }
+//        if(textVisibilityState.value) {
+//            Text(text = "Toggle")
+//        }
+        Text(
+            text = "Toggle",
+            modifier = Modifier.alpha(
+                if (textVisibilityState.value) 1f else 0f
+            )
+        )
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(onClick = {
