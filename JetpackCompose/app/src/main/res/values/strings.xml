@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JetpackCompose</string>
     <string name="title_activity_modifier">ModifierActivity</string>
+    <string name="title_activity_state_remember">StateRememberActivity</string>
 </resources>
